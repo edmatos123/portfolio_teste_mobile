@@ -8,7 +8,7 @@ import config.Configuracao;
 public class CapabilitiesFactory {
 
 		
-	public static UiAutomator2Options criarCapabilities() {
+	public static UiAutomator2Options getCapabilities() {
 		
 		UiAutomator2Options options = new UiAutomator2Options();
 		
