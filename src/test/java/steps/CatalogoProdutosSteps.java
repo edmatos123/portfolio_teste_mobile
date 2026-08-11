@@ -2,12 +2,12 @@ package steps;
 
 import io.cucumber.java.en.When;
 
-public class ProdutosSteps {
+public class CatalogoProdutosSteps {
 
 	
 	 @When("que o aplicativo foi aberto")
 	    public void aplicativoAberto() {
-	        System.out.println("Aplicativo aberto");
+	       //Validar o Aplicativo aberto
 	    }
 	
 	
