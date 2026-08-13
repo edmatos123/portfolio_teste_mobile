@@ -56,6 +56,11 @@
             <version>1.12.2</version>
          </dependency>
 
+        <dependency>
+        	<groupId>PortfolioAutomacaoApi</groupId>
+        	<artifactId>PortfolioAutomacaoApi</artifactId>
+        	<version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

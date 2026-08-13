@@ -12,5 +12,8 @@ public class CatalogoProdutosValidation {
 		assertTrue(telaCatalogo.telaCatalogoVisivel(),"A tela do Catalogo dos Produtos não foi exibida!");
 	}
 	
+	public void validarExibicaoprodutoCatalogo(String nmProduto) {
+		assertTrue(telaCatalogo.telaCatalogoProdutoVisivel(nmProduto),"O Produto não foi encontrado na lista!");
+	}
 	
 }
