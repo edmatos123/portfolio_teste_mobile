@@ -3,6 +3,7 @@ package pages;
 import io.appium.java_client.android.AndroidDriver;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.Map;
 
 import org.openqa.selenium.By;
@@ -25,16 +26,16 @@ public class BasePage {
 	}
 	
 	
-	public WebElement waitVisible(By by) {		
+	protected WebElement waitVisible(By by) {		
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(by));		
 	}
 	
-	public WebElement waitClickable(By by) {
+	protected WebElement waitClickable(By by) {
 		return wait.until(ExpectedConditions.elementToBeClickable(by));
 	}
 	
 	
-	public boolean isElementVisible(By by) {
+	protected boolean isElementVisible(By by) {
 		
 		 try {
 	          return waitVisible(by).isDisplayed();
@@ -45,15 +46,15 @@ public class BasePage {
 	     }
 	}
 	
-	public void click(By by) {
+	protected void click(By by) {
 		waitClickable(by).click();
 	}
 	
-	public void sendKeys(By by, String txt) {
+	protected void sendKeys(By by, String txt) {
 		waitVisible(by).sendKeys(txt);
 	}
 	
-	public void swipeUp() {
+	protected void swipeUp() {
 		
 		int width = driver.manage().window().getSize().getWidth();
 		int height = driver.manage().window().getSize().getHeight();		
@@ -69,7 +70,7 @@ public class BasePage {
 		
 	}
 	
-	public void findUntilEnd(By conteudo, By elementoFinal) {
+	protected void findUntilEnd(By conteudo, By elementoFinal) {
 		
 		boolean conteudoEncontrado = false;
 		while(!isElementVisible(elementoFinal) && conteudoEncontrado == false) {
@@ -84,6 +85,12 @@ public class BasePage {
 		}			
 			
 	}
+	
+	 protected List<WebElement> findElements(By by){
+	    	
+	    	return driver.findElements(by);
+	    }
+	    
 	
 	
 	
