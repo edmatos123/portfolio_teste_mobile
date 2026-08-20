@@ -38,7 +38,10 @@ public class CatalogoProdutosSteps {
 	}
 
 	
-	
+	@And("seleciono o produto {string}")
+	public void seleciono_o_produto(String nmProduto){
+		telaCatalogo.selecionarProduto(nmProduto);		
+	}
 	 
 	
 	 

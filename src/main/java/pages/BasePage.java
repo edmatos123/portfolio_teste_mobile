@@ -85,10 +85,6 @@ public class BasePage {
 			
 	}
 	
-	/*public boolean isElementPresent() {
-		
-	}*/
-	
 	
 	
 	
