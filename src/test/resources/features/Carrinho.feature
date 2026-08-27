@@ -1,5 +1,5 @@
 @CT01
-Feature: Login
+Feature: Sauce Labs
 Scenario: CT01 - Login valido
   
   Given que o aplicativo foi aberto
@@ -21,4 +21,6 @@ Scenario: CT03 - Incluir produto no carrinho
   And seleciono o produto "Sauce Labs Backpack (violet)"
   When adiciono no carrinho   
   Then o produto e exibido no carrinho
+  
+
   

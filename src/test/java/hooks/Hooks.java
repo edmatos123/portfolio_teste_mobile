@@ -18,7 +18,7 @@ public class Hooks {
 	
 	@After
 	public void finalizar() {
-	//	DriverFactory.quitDriver();
+		DriverFactory.quitDriver();
 	}
 	
 }

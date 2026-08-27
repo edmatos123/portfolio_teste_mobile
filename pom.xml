@@ -15,8 +15,21 @@
         <appium.version>10.0.0</appium.version>
         <junit.version>5.12.2</junit.version>
         <cucumber.version>7.23.0</cucumber.version>
-
+		<allure.version>2.35.3</allure.version>
+		
     </properties>
+    
+    <dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-bom</artifactId>
+            <version>${allure.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
 
     <dependencies>
 
@@ -55,12 +68,31 @@
             <artifactId>junit-platform-suite</artifactId>
             <version>1.12.2</version>
          </dependency>
+         
+         
+<!-- JUnit Platform Launcher -->
+<dependency>
+    <groupId>org.junit.platform</groupId>
+    <artifactId>junit-platform-launcher</artifactId>
+    <version>1.12.2</version>
+    <scope>test</scope>
+</dependency>
 
-        <dependency>
-        	<groupId>PortfolioAutomacaoApi</groupId>
-        	<artifactId>PortfolioAutomacaoApi</artifactId>
-        	<version>0.0.1-SNAPSHOT</version>
-        </dependency>
+        
+        <!-- Allure + Cucumber 7 -->
+	<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-cucumber7-jvm</artifactId>
+    <scope>test</scope>
+	</dependency>
+
+<!-- Allure + JUnit Platform -->
+	<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-junit-platform</artifactId>
+    <scope>test</scope>
+	</dependency>
+     
     </dependencies>
 
     <build>
