@@ -8,6 +8,8 @@ import java.util.Map;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -21,7 +23,7 @@ public class BasePage {
 	public BasePage() {
 		
 		this.driver = DriverFactory.getDriver();
-		this.wait = new WebDriverWait(driver,Duration.ofSeconds(5));		
+		this.wait = new WebDriverWait(driver,Duration.ofSeconds(8));		
 		
 	}
 	
@@ -54,7 +56,7 @@ public class BasePage {
 		waitVisible(by).sendKeys(txt);
 	}
 	
-	protected void swipeUp() {
+	protected void swipeUp_OLD() {
 		
 		int width = driver.manage().window().getSize().getWidth();
 		int height = driver.manage().window().getSize().getHeight();		
@@ -91,7 +93,47 @@ public class BasePage {
 	    	return driver.findElements(by);
 	    }
 	    
-	
+	 protected void swipeUp() {
+
+		    int width = driver.manage().window().getSize().getWidth();
+		    int height = driver.manage().window().getSize().getHeight();
+
+		    PointerInput finger = new PointerInput(
+		        PointerInput.Kind.TOUCH,
+		        "finger"
+		    );
+
+		    Sequence swipe = new Sequence(finger, 0);
+
+		    swipe.addAction(
+		        finger.createPointerMove(
+		            Duration.ZERO,
+		            PointerInput.Origin.viewport(),
+		            width / 2,
+		            (int) (height * 0.80)
+		        )
+		    );
+
+		    swipe.addAction(
+		        finger.createPointerDown(0)
+		    );
+
+		    swipe.addAction(
+		        finger.createPointerMove(
+		            Duration.ofMillis(700),
+		            PointerInput.Origin.viewport(),
+		            width / 2,
+		            (int) (height * 0.30)
+		        )
+		    );
+
+		    swipe.addAction(
+		        finger.createPointerUp(0)
+		    );
+
+		    driver.perform(List.of(swipe));
+		}
+
 	
 	
 	

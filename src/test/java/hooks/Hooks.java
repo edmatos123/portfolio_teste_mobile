@@ -13,12 +13,15 @@ public class Hooks {
 	
 	@Before
 	public void iniciar() throws MalformedURLException {
+	
 		DriverFactory.startDriver();
 	}
 	
 	@After
-	public void finalizar() {
-		DriverFactory.quitDriver();
+	public void finalizar() throws InterruptedException {
+		
+    	DriverFactory.quitDriver();				
+    	Thread.sleep(5000);
 	}
 	
 }
