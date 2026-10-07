@@ -22,5 +22,22 @@ Scenario: CT03 - Incluir produto no carrinho
   When adiciono no carrinho   
   Then o produto e exibido no carrinho
   
+@CT04
+Scenario: CT04 - Checkout Produto
 
+  Given que o aplicativo foi aberto
+  And acesso o menu login
+  And realizo o login valido
+  And seleciono o produto "Sauce Labs Backpack (violet)"
+  When adiciono no carrinho
+  And acesso o carrinho
+  And o produto e exibido no carrinho
+  And realizo o checkout
+  Then O Checkout é feito com sucesso
+  
+  
+  
+  
+  
+  
   
