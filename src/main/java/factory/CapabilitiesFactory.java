@@ -7,6 +7,9 @@ import config.Configuracao;
 
 public class CapabilitiesFactory {
 
+	private static String username = System.getenv("KOBITON_USERNAME");
+	private static String accessKey = System.getenv("KOBITON_ACCESS_KEY");
+
 		
 	public static UiAutomator2Options getCapabilities() {
 		
@@ -14,15 +17,15 @@ public class CapabilitiesFactory {
 		
 		options.setPlatformName(Configuracao.getString("platformName"));
 		options.setAutomationName(Configuracao.getString("automationName"));
-		options.setDeviceName(Configuracao.getString("deviceName"));
-		//options.setDeviceName(Configuracao.getString("deviceNameKobiton"));
+		//options.setDeviceName(Configuracao.getString("deviceName"));
+		options.setDeviceName(Configuracao.getString("deviceNameKobiton"));
 		options.setAppPackage(Configuracao.getString("appPackage"));
 		options.setAutoGrantPermissions(Configuracao.getBoolean("autoGrantPermissions"));
 		options.setNewCommandTimeout(Duration.ofSeconds(Long.parseLong(Configuracao.getString("newCommandTimeout"))));
 		
-	    //options.setCapability("appium:username",Configuracao.getString("kobitonUSR"));
-	    //options.setCapability("appium:accessKey",Configuracao.getString("kobitonAPI"));
-	    //options.setCapability("kobiton:app",Configuracao.getString("kobitonAPP"));
+	    options.setCapability("appium:username",Configuracao.getString(username));
+	    options.setCapability("appium:accessKey",Configuracao.getString(accessKey));
+	    options.setCapability("kobiton:app",Configuracao.getString("kobitonAPP"));
 	    
 		return options;
 	}

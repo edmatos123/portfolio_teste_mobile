@@ -9,7 +9,7 @@ public class CarrinhoPage extends BasePage {
 	
 	private By lblProduto = By.id("com.saucelabs.mydemoapp.android:id/titleTV");
 	private By lblValor = By.id("com.saucelabs.mydemoapp.android:id/priceTV");
-
+    private By btnCheckOut = By.id("com.saucelabs.mydemoapp.android:id/cartBt");
 	
 	
 	public boolean validarCompatibilidadeProduto(Produto produto) {
@@ -20,11 +20,13 @@ public class CarrinhoPage extends BasePage {
 			return true;
 		}else {
 			return false;
-		}
-			
+		}					
 		
-		
-		
+	}
+	
+	
+	public void clicarCheckout() {		
+		click(btnCheckOut);		
 	}
 	
 	

@@ -16,6 +16,7 @@
         <junit.version>5.12.2</junit.version>
         <cucumber.version>7.23.0</cucumber.version>
 		<allure.version>2.35.3</allure.version>
+		<faker.version>1.0.2</faker.version>
 		
     </properties>
     
@@ -32,6 +33,13 @@
 </dependencyManagement>
 
     <dependencies>
+    
+            <!-- Java Faker -->
+        <dependency>
+            <groupId>com.github.javafaker</groupId>
+            <artifactId>javafaker</artifactId>
+            <version>${faker.version}</version>
+        </dependency>
 
         <!-- Appium -->
         <dependency>

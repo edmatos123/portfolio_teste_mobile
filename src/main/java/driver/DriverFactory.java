@@ -17,7 +17,7 @@ public class DriverFactory {
 
 	public static void startDriver() throws MalformedURLException {
 		//URL url = new URL(Configuracao.getString("Url"));		
-		URL url = new URL(Configuracao.getString("Url"));
+		URL url = new URL(Configuracao.getString("kobitonServerUrl"));
 		driver.set(new AndroidDriver(url,CapabilitiesFactory.getCapabilities()));		
 		
 		}
