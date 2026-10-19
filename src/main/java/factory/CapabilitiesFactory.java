@@ -22,8 +22,8 @@ public class CapabilitiesFactory {
 		options.setAutoGrantPermissions(Configuracao.getBoolean("autoGrantPermissions"));
 		options.setNewCommandTimeout(Duration.ofSeconds(Long.parseLong(Configuracao.getString("newCommandTimeout"))));
 		
-	    options.setCapability("appium:username",Configuracao.getString(username));
-	    options.setCapability("appium:accessKey",Configuracao.getString(accessKey));
+	    options.setCapability("appium:username",username);
+	    options.setCapability("appium:accessKey",accessKey);
 	    options.setCapability("kobiton:app",Configuracao.getString("kobitonAPP"));
 	    
 		return options;
