@@ -9,7 +9,6 @@ public class CapabilitiesFactory {
 
 	private static String username = System.getenv("KOBITON_USERNAME");
 	private static String accessKey = System.getenv("KOBITON_ACCESS_KEY");
-
 		
 	public static UiAutomator2Options getCapabilities() {
 		
