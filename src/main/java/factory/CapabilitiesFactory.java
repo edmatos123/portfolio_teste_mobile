@@ -10,8 +10,7 @@ public class CapabilitiesFactory {
 	private static String username = System.getenv("KOBITON_USERNAME");
 	private static String accessKey = System.getenv("KOBITON_ACCESS_KEY");
 		
-	public static UiAutomator2Options getCapabilities() {
-		
+	public static UiAutomator2Options getCapabilities() {		
 		UiAutomator2Options options = new UiAutomator2Options();
 		
 		options.setPlatformName(Configuracao.getString("platformName"));
