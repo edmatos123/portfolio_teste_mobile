@@ -1,4 +1,3 @@
-@CT01
 Feature: Sauce Labs
 Scenario: CT01 - Login valido
   
