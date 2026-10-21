@@ -19,7 +19,7 @@ public class CapabilitiesFactory {
 		options.setDeviceName(Configuracao.getString("deviceNameKobiton"));
 		options.setAppPackage(Configuracao.getString("appPackage"));
 		options.setAutoGrantPermissions(Configuracao.getBoolean("autoGrantPermissions"));
-		options.setNewCommandTimeout(Duration.ofSeconds(Long.parseLong(Configuracao.getString("newCommandTimeout"))));
+		//options.setNewCommandTimeout(Duration.ofSeconds(Long.parseLong(Configuracao.getString("newCommandTimeout"))));
 		
 	    options.setCapability("appium:username",username);
 	    options.setCapability("appium:accessKey",accessKey);
