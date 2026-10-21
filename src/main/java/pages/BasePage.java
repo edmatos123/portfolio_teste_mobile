@@ -23,7 +23,7 @@ public class BasePage {
 	public BasePage() {
 		
 		this.driver = DriverFactory.getDriver();
-		this.wait = new WebDriverWait(driver,Duration.ofSeconds(4));		
+		this.wait = new WebDriverWait(driver,Duration.ofSeconds(6));		
 		
 	}
 	
