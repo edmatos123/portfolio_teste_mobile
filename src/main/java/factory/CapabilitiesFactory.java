@@ -21,8 +21,18 @@ public class CapabilitiesFactory {
 		options.setAutoGrantPermissions(Configuracao.getBoolean("autoGrantPermissions"));
 		options.setNewCommandTimeout(Duration.ofSeconds(Long.parseLong(Configuracao.getString("newCommandTimeout"))));
 		
-	    options.setCapability("appium:username",username);
-	    options.setCapability("appium:accessKey",accessKey);
+	    
+	    
+	    if (System.getenv("CI") != null) {
+	    	options.setCapability("appium:username",username);
+		    options.setCapability("appium:accessKey",accessKey);
+	    } else {
+	    	options.setCapability("appium:username",Configuracao.getString("kobitonUSR"));
+	  	    options.setCapability("appium:accessKey",Configuracao.getString("kobitonAPI"));
+	    }
+
+	  
+		
 	    options.setCapability("kobiton:app",Configuracao.getString("kobitonAPP"));
 	    
 		return options;
