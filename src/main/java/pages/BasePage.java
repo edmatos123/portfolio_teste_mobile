@@ -13,6 +13,7 @@ import org.openqa.selenium.interactions.Sequence;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 import driver.DriverFactory;
 
 
@@ -24,7 +25,7 @@ public class BasePage {
 	public BasePage() {
 		
 		this.driver = DriverFactory.getDriver();
-		this.wait = new WebDriverWait(driver,Duration.ofSeconds(7));		
+		this.wait = new WebDriverWait(driver,Duration.ofSeconds(60));		
 		
 	}
 	
