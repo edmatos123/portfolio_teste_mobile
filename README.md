@@ -6,7 +6,7 @@ Projeto de automação de testes Mobile desenvolvido em **Java** utilizando **Ap
 
 ## 🚀 Objetivo
 
-Demonstrar a automação de testes Mobile em aplicações Android, aplicando boas práticas de desenvolvimento, integração contínua (CI) e execução em dispositivos locais e remotos por meio da **Device Farm Kobiton**.
+Demonstrar a automação de testes Mobile em aplicações Android, aplicando boas práticas de desenvolvimento, integração contínua (CI) e execução em dispositivos remotos por meio da **Device Farm Kobiton**.
 
 **Aplicação utilizada:** [Sauce Labs My Demo App](https://github.com/saucelabs/my-demo-app-android/releases)
 
